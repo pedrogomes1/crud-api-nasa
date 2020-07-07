@@ -22,7 +22,6 @@ export default function InterestList() {
   }, []);
 
   useEffect(() => {
-    console.log(informations);
     localStorage.setItem('@NASA', JSON.stringify(informations));
   }, [informations]);
 

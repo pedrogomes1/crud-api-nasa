@@ -45,7 +45,7 @@ export const Table = styled.table`
   td {
     border-top: 1px solid #6666;
 
-    > div {
+    div {
       display: flex;
     }
 

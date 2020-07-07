@@ -46,18 +46,28 @@ export const Form = styled.form`
   display: flex;
   align-items: center;
 
-  input {
-    flex: 1;
+  div {
+    display: flex;
+    align-items: center;
     border: 0;
-    width: 300px;
-    padding: 20px;
+    width: 500px;
+    height: 60px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    background: #fff;
+
+    svg {
+      margin: 0 10px;
+    }
+  }
+  input {
+    border: none;
+    flex: 1;
   }
 
   button {
     width: 120px;
-    height: 59px;
+    height: 60px;
 
     background: #0b3d91;
 
@@ -154,13 +164,6 @@ export const Cards = styled.ul`
     text-align: center;
   }
 `;
-
-export const Error = styled.span`
-  color: #c53030;
-  display: block;
-  margin-top: 8px;
-`;
-
 export const ContainerButton = styled.div`
   display: flex;
   justify-content: center;
@@ -208,7 +211,6 @@ export const Screen = styled.div`
     margin-top: 32px;
     font-weight: bold;
     font-size: 36px;
-    line-height: 42px;
     color: #f0f0f5;
   }
 `;

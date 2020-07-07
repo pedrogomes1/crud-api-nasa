@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from 'axios';
-import { MdList, MdAdd } from 'react-icons/md';
+import { MdList, MdAdd, MdSearch } from 'react-icons/md';
 import { FiCheckCircle } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -53,7 +53,7 @@ function Main() {
 
   function handleFavorites(information) {
     const existingInformation = favorites.find(
-      (info) => info.nasa_id === information.nasa_id
+      (favorite) => favorite.nasa_id === information.nasa_id
     );
 
     if (existingInformation) {
@@ -81,13 +81,17 @@ function Main() {
       </Header>
 
       <Form onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Digite o termo de pesquisa para buscar as imagens"
-          name="search"
-          onChange={(e) => setInputSearch(e.target.value)}
-        />
+        <div>
+          <MdSearch color="#0b3d91" size={30} />
+          <input
+            type="text"
+            placeholder="Digite o termo de pesquisa para buscar as imagens"
+            name="search"
+            onChange={(e) => setInputSearch(e.target.value)}
+          />
+        </div>
         <button type="submit">Encontrar</button>
+
         <span>(Ex: Apollo, Sun, Moon)</span>
       </Form>
 

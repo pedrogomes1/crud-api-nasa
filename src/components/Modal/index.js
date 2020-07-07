@@ -51,13 +51,13 @@ export default function Modal({ onClose, open, data }) {
       <Container>
         <Card>
           <Form onSubmit={handleEdit} initialData={initialValues}>
-            <p>ID: </p>
+            <h4>ID: </h4>
             <Input type="text" name="nasa_id" value={data.nasa_id} disabled />
-            <p>Data Criação: </p>
+            <h4>Data Criação: </h4>
             <Input type="text" name="date_created" />
-            <p>Título: </p>
+            <h4>Título:</h4>
             <Input type="text" name="title" />
-            <p>Descrição: </p>
+            <h4>Descrição: </h4>
             <Input multiline name="description" />
             <div>
               <button type="submit">Atualizar</button>

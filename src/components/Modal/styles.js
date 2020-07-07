@@ -23,11 +23,6 @@ export const Card = styled.div`
 
   padding: 20px;
 
-  p {
-    color: #000;
-    font-weight: bold;
-  }
-
   input {
     width: 300px;
     padding: 10px;
